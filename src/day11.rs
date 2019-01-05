@@ -84,19 +84,3 @@ pub fn solve(input: &str) -> ((usize, usize), (usize, usize, usize)) {
     let grid = make_grid(grid_serial_number);
     (solve1(&grid), solve2(&grid))
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_solve1() {
-        assert_eq!(solve1(&make_grid(18)), (33, 45))
-    }
-
-    #[test]
-    fn test_solve2() {
-        assert_eq!(solve2(&make_grid(18)), (90, 269, 16));
-        assert_eq!(solve2(&make_grid(42)), (232, 251, 12))
-    }
-}
